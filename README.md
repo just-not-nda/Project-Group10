@@ -23,10 +23,12 @@
 ## 3. Hướng giải quyết bài toán
 ### a. Phân tích bài toán
 - **Mô tả**:
-  - Đầu vào: 1 số N
-  + Đặc điểm: số đầu vào đại diện cho kích thước của bàn cờ NxN và số lượng quân hậu đặt trên bàn cờ đó
+  - Đầu vào: 1 số N (đại diện cho kích thước của bàn cờ NxN và số lượng quân hậu đặt trên bàn cờ đó)
   - Đầu ra: số lượng cách xếp bàn cờ và sơ đồ của từng bàn cờ (với số 0 là ô cờ trống, số từ 1 đến N là số thứ tự của N quân hậu)
- 
+  - Ví dụ: với N = 4 thì có 2 cách đặt thỏa mãn như sau:
+    
+    
+- **Nhận xét**:  
 
 ### b. Thuật toán/Hướng tiếp cận
 (Mô tả chi tiết cách giải quyết bài toán, có thể kèm theo sơ đồ hoặc giả mã để minh họa)
