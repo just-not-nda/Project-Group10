@@ -1,23 +1,28 @@
-# Báo cáo Bài tập lớn - Nhóm X
+# Báo cáo Bài tập lớn - Nhóm 10
 
 ## 1. Thông tin nhóm
 | STT | Họ và tên | MSSV | Vai trò |
 |---|---|---|---|
-| 1 | Nguyễn Văn A | 123456 | Nhóm trưởng |
-| 2 | Trần Thị B | 123457 | Thành viên |
-| 3 | Lê Văn C | 123458 | Thành viên |
+| 1 | Nguyễn Đức Anh | 24022763 | Nhóm trưởng |
+| 2 | Dương Minh Vũ | 24022844 | Thành viên |
+| 3 | Hoàng Tuấn Đạt | 24022773 | Thành viên |
+| 4 | Hà Minh Vũ | 24022845 | Thành viên |
+| 5 | Nguyễn Đăng Mạnh | 24022815 | Thành viên |
 
 ---
 
 ## 2. Thông tin bài tập
-- **Tên bài toán**: Giải quyết bài toán XYZ
-
-
+- **Tên bài toán**: Bài 5: Bài toán N-Queens(N Quân Hậu)
+- **Đề bài**: Trên bàn cờ NxN, cần đặt N quân hậu sao cho không quân hậu nào ăn nhau. Quân hậu có thể ăn các ô nằm cùng hàng, cùng cột, cùng đường chéo.
+- **Gợi ý**:
+  - Duyệt từng dòng, mỗi dòng đặt 1 quân hậu.
+  - Đệ quy sang dòng tiếp theo, kiểm tra tính hợp lệ trước khi đặt.
+ 
 ---
 
 ## 3. Hướng giải quyết bài toán
 ### a. Phân tích bài toán
-(Mô tả sơ bộ về bài toán, yêu cầu đầu vào - đầu ra, các ràng buộc nếu có)
+
 
 ### b. Thuật toán/Hướng tiếp cận
 (Mô tả chi tiết cách giải quyết bài toán, có thể kèm theo sơ đồ hoặc giả mã để minh họa)
