@@ -66,19 +66,19 @@ Thuật toán sử dụng phương pháp quay lui để thử từng vị trí �
   => có thể đặt quân hậu
 
 - HÀM **Place_Queen(int i)**
-  - LẶP QUA từng cột `j` từ `1` đến `n`
+  - DUYỆT QUA từng cột `j` từ `1` đến `n`
        - NẾU `Can_Place_Queen(i, j, n)` LÀ true
             - ĐẶT `queen[j] = i` (đặt quân hậu vào hàng i, cột j)
-            - `col[j] = false` (đánh dấu cột đã bị chiếm)
-            - `dia1[i - j + n] = false` (đánh dấu đường chéo chính đã bị chiếm)
-            - `dia2[i + j - 1] = false` (đánh dấu đường chéo phụ đã bị chiếm)
+                - `col[j] = false` (đánh dấu cột đã bị chiếm)
+                - `dia1[i - j + n] = false` (đánh dấu đường chéo chính đã bị chiếm)
+                - `dia2[i + j - 1] = false` (đánh dấu đường chéo phụ đã bị chiếm)
 
             - NẾU `i == n` (đã đặt hết quân hậu)
                 - GỌI `Print_Result()`
             - NGƯỢC LẠI
                 - GỌI ĐỆ QUY `Place_Queen(i + 1)`
-            - LOẠI BỎ quân hậu bằng cách gán lại giá trị ban đầu:
-                - `col[j] =  dia1[i - j + n] = dia2[i + j - 1] = true`
+                - LOẠI BỎ quân hậu bằng cách gán lại giá trị ban đầu:
+                    - `col[j] =  dia1[i - j + n] = dia2[i + j - 1] = true`
   - KẾT THÚC LẶP
   
 - HÀM **main()**
