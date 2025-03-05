@@ -25,7 +25,7 @@
 - **Mô tả**:
   - Đầu vào: 1 số `N` (đại diện cho kích thước của bàn cờ `NxN` và số lượng quân hậu đặt trên bàn cờ đó)
   - Đầu ra: số lượng cách xếp bàn cờ và sơ đồ của từng bàn cờ (với số `0` là ô cờ trống, số từ `1` đến `N` là số thứ tự của `N` quân hậu)
-  - Ví dụ: với `N` = 4 thì có 2 cách đặt thỏa mãn như sau:
+  - Ví dụ: với `N = 4` thì có 2 cách đặt thỏa mãn như sau:
     
     ![Image](https://github.com/user-attachments/assets/544a646b-08dc-4958-9e1c-c793bfac2e35)
 
@@ -44,8 +44,8 @@ Thuật toán sử dụng phương pháp **đệ quy quay lui** để thử từ
 - **Bước 2:** **Thử đặt quân hậu vào từng cột trong hàng hiện tại `(j = 1 → N)`.**
 - **Bước 3:** **Kiểm tra xem vị trí `(i, j)` có hợp lệ không:**
   - Không có quân hậu nào trong cùng **cột**: Sử dụng mảng `bool col` để đánh dấu các cột của bàn cờ ( `col[i] = true` nếu trên cột i chưa đặt quân hậu nào )
-  - Không có quân hậu nào trên **đường chéo chính**: Sử dụng mảng `bool dia1` để đánh dấu đường chéo xuôi mà con hậu quản lý ( `dia1[i - j + n] == true` nếu đường chéo chính chưa đặt quân hậu nào ) 
-  - Không có quân hậu nào trên **đường chéo phụ**: Sử dụng mảng `bool dia1` để đánh dấu đường chéo ngược mà con hậu quản lý( `dia1[i +  j - 1] == true` nếu đường chéo chính chưa đặt quân hậu nào ) 
+  - Không có quân hậu nào trên **đường chéo xuôi**: Sử dụng mảng `bool dia1` để đánh dấu **đường chéo xuôi** mà con hậu quản lý ( `dia1[i - j + n] == true` nếu đường chéo chính chưa đặt quân hậu nào ) 
+  - Không có quân hậu nào trên **đường chéo ngược**: Sử dụng mảng `bool dia1` để đánh dấu **đường chéo ngược** mà con hậu quản lý ( `dia1[i +  j - 1] == true` nếu đường chéo chính chưa đặt quân hậu nào ) 
 - **Bước 4:** **Nếu vị trí hợp lệ:**
   - Đặt quân hậu vào vị trí đó.
   - Lưu vị trí đó vào mảng `queen` với giá trị là hàng `i` và chỉ số là cột `j`
