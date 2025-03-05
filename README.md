@@ -63,12 +63,12 @@ Thuật toán sử dụng phương pháp quay lui để thử từng vị trí �
 
 - HÀM **Can_Place_Queen(int i, int j)**
     Điều kiện là  `col[j] == true` (cột trống) VÀ `dia1[i - j + n] == true` (đường chéo chính trống) VÀ `dia2[i + j - 1] == true` (đường chéo phụ trống)
-        - => có thể đặt quân hậu
+  => có thể đặt quân hậu
 
 - HÀM **Place_Queen(int i)**
   - LẶP QUA từng cột `j` từ `1` đến `n`
        - NẾU `Can_Place_Queen(i, j, n)` LÀ true
-            - ĐẶT `queen[i][j] = i` (đặt quân hậu vào hàng i, cột j)
+            - ĐẶT `queen[j] = i` (đặt quân hậu vào hàng i, cột j)
             - `col[j] = false` (đánh dấu cột đã bị chiếm)
             - `dia1[i - j + n] = false` (đánh dấu đường chéo chính đã bị chiếm)
             - `dia2[i + j - 1] = false` (đánh dấu đường chéo phụ đã bị chiếm)
