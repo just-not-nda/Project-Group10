@@ -91,7 +91,7 @@ Thuật toán sử dụng phương pháp quay lui để thử từng vị trí �
 
 #### **SƠ ĐỒ KHỐI**
 
-  ![Image](https://github.com/user-attachments/assets/211d6a0f-6625-4d9a-856f-fefd3669fb21)
+  ![Image](https://github.com/user-attachments/assets/2222b2df-b04d-44ca-a102-6da7157b2510)
 #### **ĐỘ PHỨC TẠP BỘ NHỚ**
 - Mảng trạng thái: queen[N] → O(N)
 - Mảng Boolean: col[N], dia1[2N], dia2[2N] → O(N)
