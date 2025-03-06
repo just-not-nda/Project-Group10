@@ -48,7 +48,7 @@ Thuật toán sử dụng phương pháp **đệ quy quay lui** để thử từ
   - Không có quân hậu nào trên **đường chéo ngược**: Sử dụng mảng `bool dia2` để đánh dấu **đường chéo ngược** mà con hậu quản lý ( `dia2[i +  j - 1] == true` nếu **đường chéo ngược** chưa đặt quân hậu nào ) 
 - **Bước 4:** **Nếu vị trí hợp lệ:**
   - Đặt quân hậu vào vị trí đó.
-  - Lưu vị trí đó vào mảng `queen` với giá trị là cột `j` và chỉ số là hàng `i`
+  - Lưu vị trí đó vào mảng `queen[i] = j` nghĩa là quân hậu hàng `i` đặt ở cột `j`
   - Gọi đệ quy để đặt quân hậu ở hàng tiếp theo `(i + 1)` 
 - **Bước 5:** **Nếu đặt xong tất cả `N` quân hậu, in ra một cách giải hợp lệ.**
 - **Bước 6:** **Nếu không tìm thấy cách đặt hợp lệ ở hàng `i`, quay lui:**
