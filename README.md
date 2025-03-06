@@ -97,7 +97,7 @@ Thuật toán sử dụng phương pháp **đệ quy quay lui** để thử từ
 - Mảng **Boolean**: `col[N]`, `dia1[2N]`, `dia2[2N]` → O(N)
 - **Đệ quy** sâu tối đa `N` → O(N)
 
- => Tổng **độ phức tạp**: O(N) + O(N) + O(N) = O(N)
+ => Tổng **độ phức tạp**: O(N) + O(N) + O(N) = **O(N)**
 
 
  
