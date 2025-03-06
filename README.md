@@ -44,8 +44,8 @@ Thuật toán sử dụng phương pháp **đệ quy quay lui** để thử từ
 - **Bước 2:** **Thử đặt quân hậu vào từng cột trong hàng hiện tại `(j = 1 → N)`.**
 - **Bước 3:** **Kiểm tra xem vị trí `(i, j)` có hợp lệ không:**
   - Không có quân hậu nào trong cùng **cột**: Sử dụng mảng `bool col` để đánh dấu các cột của bàn cờ ( `col[i] = true` nếu trên cột i chưa đặt quân hậu nào )
-  - Không có quân hậu nào trên **đường chéo xuôi**: Sử dụng mảng `bool dia1` để đánh dấu **đường chéo xuôi** mà con hậu quản lý ( `dia1[i - j + n] == true` nếu đường chéo chính chưa đặt quân hậu nào ) 
-  - Không có quân hậu nào trên **đường chéo ngược**: Sử dụng mảng `bool dia1` để đánh dấu **đường chéo ngược** mà con hậu quản lý ( `dia2[i +  j - 1] == true` nếu đường chéo chính chưa đặt quân hậu nào ) 
+  - Không có quân hậu nào trên **đường chéo xuôi**: Sử dụng mảng `bool dia1` để đánh dấu **đường chéo xuôi** mà con hậu quản lý ( `dia1[i - j + n] == true` nếu **đường chéo xuôi** chưa đặt quân hậu nào ) 
+  - Không có quân hậu nào trên **đường chéo ngược**: Sử dụng mảng `bool dia2` để đánh dấu **đường chéo ngược** mà con hậu quản lý ( `dia2[i +  j - 1] == true` nếu **đường chéo ngược** chưa đặt quân hậu nào ) 
 - **Bước 4:** **Nếu vị trí hợp lệ:**
   - Đặt quân hậu vào vị trí đó.
   - Lưu vị trí đó vào mảng `queen` với giá trị là hàng `i` và chỉ số là cột `j`
