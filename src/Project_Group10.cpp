@@ -50,7 +50,7 @@ void Place_Queen(int i)
     {
         if(Can_Place_Queen(i, j))
         {
-            queen[j] = i;
+            queen[i] = j;
             col[j] = dia1[i - j + N] = dia2[i + j - 1] = false;
             if(i == N)
                 Print_Result();
