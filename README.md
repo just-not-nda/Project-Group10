@@ -45,7 +45,7 @@ Thuật toán sử dụng phương pháp **đệ quy quay lui** để thử từ
 - **Bước 3:** **Kiểm tra xem vị trí `(i, j)` có hợp lệ không:**
   - Không có quân hậu nào trong cùng **cột**: Sử dụng mảng `bool col` để đánh dấu các cột của bàn cờ ( `col[i] = true` nếu trên cột i chưa đặt quân hậu nào )
   - Không có quân hậu nào trên **đường chéo xuôi**: Sử dụng mảng `bool dia1` để đánh dấu **đường chéo xuôi** mà con hậu quản lý ( `dia1[i - j + n] == true` nếu đường chéo chính chưa đặt quân hậu nào ) 
-  - Không có quân hậu nào trên **đường chéo ngược**: Sử dụng mảng `bool dia1` để đánh dấu **đường chéo ngược** mà con hậu quản lý ( `dia1[i +  j - 1] == true` nếu đường chéo chính chưa đặt quân hậu nào ) 
+  - Không có quân hậu nào trên **đường chéo ngược**: Sử dụng mảng `bool dia1` để đánh dấu **đường chéo ngược** mà con hậu quản lý ( `dia2[i +  j - 1] == true` nếu đường chéo chính chưa đặt quân hậu nào ) 
 - **Bước 4:** **Nếu vị trí hợp lệ:**
   - Đặt quân hậu vào vị trí đó.
   - Lưu vị trí đó vào mảng `queen` với giá trị là hàng `i` và chỉ số là cột `j`
@@ -92,12 +92,12 @@ Thuật toán sử dụng phương pháp **đệ quy quay lui** để thử từ
 #### **SƠ ĐỒ KHỐI**
 
   ![Image](https://github.com/user-attachments/assets/2222b2df-b04d-44ca-a102-6da7157b2510)
-#### **ĐỘ PHỨC TẠP BỘ NHỚ**
+#### **ĐÁNH GIÁ ĐỘ PHỨC TẠP**
 - Mảng **trạng thái**: `queen[N]` → O(N)
 - Mảng **Boolean**: `col[N]`, `dia1[2N]`, `dia2[2N]` → O(N)
 - **Đệ quy** sâu tối đa `N` → O(N)
 
- => Tổng **độ phức tạp bộ nhớ**: O(N) + O(N) + O(N) = O(N)
+ => Tổng **độ phức tạp**: O(N) + O(N) + O(N) = O(N)
 
 
  
