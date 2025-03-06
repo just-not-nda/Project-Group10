@@ -59,7 +59,7 @@ Thuật toán sử dụng phương pháp **đệ quy quay lui** để thử từ
 #### **MÃ GIẢ**
 - HÀM **Print_Result()**
   - **TĂNG** biến đếm `cnt`
-  - **IN** ra cách đặt quân hậu hiện tại trên bàn cờ (phần tử `queen[i]` có **giá trị** là vị trí cột và chỉ số `i` ứng với số hàng nên khi đúng vị trí `(hàng, cột)` đó thì in ra **thứ tự** quân hậu, còn lại in ra `0`)  
+  - **IN** ra cách đặt quân hậu hiện tại trên bàn cờ (phần tử `queen[i]` có **giá trị** là vị trí hàng và chỉ số `i` ứng với số cột nên khi đúng vị trí `(hàng, cột)` đó thì in ra **thứ tự** quân hậu, còn lại in ra `0`)  
 
 - HÀM **Can_Place_Queen(int i, int j)**
     **ĐIỀU KIỆN** là  `col[j] == true` (cột trống) VÀ `dia1[i - j + n] == true` (đường chéo chính trống) VÀ `dia2[i + j - 1] == true` (đường chéo phụ trống)
