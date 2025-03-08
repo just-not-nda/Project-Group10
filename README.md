@@ -44,11 +44,11 @@ Thuật toán sử dụng phương pháp **đệ quy quay lui** để thử từ
 - **Bước 2:** **Thử đặt quân hậu vào từng cột trong hàng hiện tại `(j = 1 → N)`.**
 - **Bước 3:** **Kiểm tra xem vị trí `(i, j)` có hợp lệ không:**
   - Không có quân hậu nào trong cùng **cột**: Sử dụng mảng `bool col` để đánh dấu các cột của bàn cờ ( `col[i] = true` nếu trên cột i chưa đặt quân hậu nào )
-  - Không có quân hậu nào trên **đường chéo xuôi**: Sử dụng mảng `bool dia1` để đánh dấu **đường chéo xuôi** mà con hậu quản lý ( `dia1[i - j + n] == true` nếu đường chéo chính chưa đặt quân hậu nào ) 
-  - Không có quân hậu nào trên **đường chéo ngược**: Sử dụng mảng `bool dia1` để đánh dấu **đường chéo ngược** mà con hậu quản lý ( `dia1[i +  j - 1] == true` nếu đường chéo chính chưa đặt quân hậu nào ) 
+  - Không có quân hậu nào trên **đường chéo xuôi**: Sử dụng mảng `bool dia1` để đánh dấu **đường chéo xuôi** mà con hậu quản lý ( `dia1[i - j + n] == true` nếu **đường chéo xuôi** chưa đặt quân hậu nào ) 
+  - Không có quân hậu nào trên **đường chéo ngược**: Sử dụng mảng `bool dia2` để đánh dấu **đường chéo ngược** mà con hậu quản lý ( `dia2[i +  j - 1] == true` nếu **đường chéo ngược** chưa đặt quân hậu nào ) 
 - **Bước 4:** **Nếu vị trí hợp lệ:**
   - Đặt quân hậu vào vị trí đó.
-  - Lưu vị trí đó vào mảng `queen` với giá trị là hàng `i` và chỉ số là cột `j`
+  - Lưu vị trí đó vào mảng `queen[i] = j` nghĩa là quân hậu hàng `i` đặt ở cột `j`
   - Gọi đệ quy để đặt quân hậu ở hàng tiếp theo `(i + 1)` 
 - **Bước 5:** **Nếu đặt xong tất cả `N` quân hậu, in ra một cách giải hợp lệ.**
 - **Bước 6:** **Nếu không tìm thấy cách đặt hợp lệ ở hàng `i`, quay lui:**
@@ -59,7 +59,7 @@ Thuật toán sử dụng phương pháp **đệ quy quay lui** để thử từ
 #### **MÃ GIẢ**
 - HÀM **Print_Result()**
   - **TĂNG** biến đếm `cnt`
-  - **IN** ra cách đặt quân hậu hiện tại trên bàn cờ
+  - **IN** ra cách đặt quân hậu hiện tại trên bàn cờ (phần tử `queen[i]` có **giá trị** là số cột và chỉ số `i` ứng với số hàng nên khi đúng vị trí `(hàng, cột)` đó thì in ra **thứ tự** quân hậu, còn lại in ra `0`)  
 
 - HÀM **Can_Place_Queen(int i, int j)**
     **ĐIỀU KIỆN** là  `col[j] == true` (cột trống) VÀ `dia1[i - j + n] == true` (đường chéo chính trống) VÀ `dia2[i + j - 1] == true` (đường chéo phụ trống)
@@ -68,7 +68,7 @@ Thuật toán sử dụng phương pháp **đệ quy quay lui** để thử từ
 - HÀM **Place_Queen(int i)**
   - **DUYỆT** qua từng cột `j` từ `1` đến `n`
        - NẾU `Can_Place_Queen(i, j, n)` LÀ true
-            - **GÁN** `queen[j] = i` (đặt quân hậu vào hàng i, cột j)
+            - **GÁN** `queen[i] = j` (đặt quân hậu vào hàng i, cột j)
                 - `col[j] = false` (đánh dấu **cột** đã bị chiếm)
                 - `dia1[i - j + n] = false` (đánh dấu **đường chéo chính** đã bị chiếm)
                 - `dia2[i + j - 1] = false` (đánh dấu **đường chéo phụ** đã bị chiếm)
@@ -92,12 +92,12 @@ Thuật toán sử dụng phương pháp **đệ quy quay lui** để thử từ
 #### **SƠ ĐỒ KHỐI**
 
   ![Image](https://github.com/user-attachments/assets/2222b2df-b04d-44ca-a102-6da7157b2510)
-#### **ĐỘ PHỨC TẠP BỘ NHỚ**
+#### **ĐÁNH GIÁ ĐỘ PHỨC TẠP**
 - Mảng **trạng thái**: `queen[N]` → O(N)
 - Mảng **Boolean**: `col[N]`, `dia1[2N]`, `dia2[2N]` → O(N)
 - **Đệ quy** sâu tối đa `N` → O(N)
 
- => Tổng **độ phức tạp bộ nhớ**: O(N) + O(N) + O(N) = O(N)
+ => Tổng **độ phức tạp**: O(N) + O(N) + O(N) = **O(N)**
 
 
  
